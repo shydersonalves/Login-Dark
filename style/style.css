@@ -1,9 +1,12 @@
-* {
-    margin: 0;
-}
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
 
 body {
     margin: 0;
+    font-family:'Noto Sans', sans-serif;;
+}
+
+body * {
+    box-sizing: border-box;
 }
 
 .main-login {
@@ -28,6 +31,10 @@ body {
     color: #77ffc0;
 }
 
+.left-img {
+    width: 28vw;
+}
+
 .right-login {
     width: 50vw;
     height: 100vh;
@@ -49,10 +56,82 @@ body {
 }
 
 .card-login > h1 {
-    color: #00ff88;
+    color: rgb(0, 255, 136);
     font-weight: 800;
 }
 
 .textfild {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 10px 0px;
+}
+
+.textfild > input {
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: #514869;
+    color: #f0ffffde;
+    font-size: 12pt;
+    box-shadow: 0px 10px 40px #00000056;
+    outline: none;
+    box-sizing: border-box;
+}
+.textfild > label {
+    color: #f0ffffde;
+    margin-bottom: 10px;
+}
+
+.textfild > input::placeholder {
+    color: #f0ffff94;
+}
+
+.btn-login {
+    width: 100%;
+    padding: 16px 0px;
+    margin: 25px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #2b134b;
+    background-color: #00ff88;
+    cursor: pointer;
+    box-shadow: 0px 10px 40px -12px #00ff8052;
+}
+
+@media(max-width: 950px){
+    .card-login{
+        width: 85%;
+    }
+}
+
+@media(max-width: 600px){
+    .main-login {
+        flex-direction: column;
+    }
+
+    .left-login > h1 {
+        display: none;
+    }
+
+    .left-login {
+        width: 100%;
+        height: auto;
+    }
     
+    .right-login {
+        width: 100%;
+        height: auto;
+    }
+
+    .left-img {
+        width: 50vw;
+    }
 }
